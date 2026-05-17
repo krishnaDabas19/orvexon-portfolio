@@ -114,10 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const mBadge = modalOverlay.querySelector('.modal-badge');
     const mTitle = modalOverlay.querySelector('.modal-title');
-    const mObj = modalOverlay.querySelector('.modal-obj');
-    const mProcess = modalOverlay.querySelector('.modal-process');
-    const mDecision = modalOverlay.querySelector('.modal-decision');
+    const mDesc = modalOverlay.querySelector('.modal-desc');
+    const mYear = modalOverlay.querySelector('.modal-year');
+    const mRole = modalOverlay.querySelector('.modal-role');
     const mTools = modalOverlay.querySelector('.modal-tools');
+    const mObj = modalOverlay.querySelector('.modal-obj');
+    const mDir = modalOverlay.querySelector('.modal-direction');
+    const mColors = modalOverlay.querySelector('.modal-colors');
+    const mFont = modalOverlay.querySelector('.modal-font');
+    const mProcess = modalOverlay.querySelector('.modal-process');
+    const mOutcome = modalOverlay.querySelector('.modal-outcome');
     const mLabel = modalOverlay.querySelector('.modal-bottom-label');
 
     const closeModal = () => {
@@ -127,23 +133,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     projectCards.forEach(card => {
       card.addEventListener('click', () => {
-        mBadge.textContent = card.getAttribute('data-category');
-        mTitle.textContent = card.getAttribute('data-title');
-        mObj.textContent = card.getAttribute('data-objective');
-        mProcess.textContent = card.getAttribute('data-process');
-        mDecision.textContent = card.getAttribute('data-decision');
-        mLabel.textContent = card.getAttribute('data-label');
+        if(mBadge) mBadge.textContent = card.getAttribute('data-category') || '';
+        if(mTitle) mTitle.textContent = card.getAttribute('data-title') || '';
+        if(mDesc) mDesc.textContent = card.getAttribute('data-overview') || card.getAttribute('data-desc') || '';
+        if(mYear) mYear.textContent = card.getAttribute('data-year') || '';
+        if(mRole) mRole.textContent = card.getAttribute('data-role') || '';
+        if(mObj) mObj.textContent = card.getAttribute('data-objective') || '';
+        if(mDir) mDir.textContent = card.getAttribute('data-direction') || '';
+        if(mProcess) mProcess.textContent = card.getAttribute('data-process') || '';
+        if(mOutcome) mOutcome.textContent = card.getAttribute('data-outcome') || '';
+        if(mLabel) mLabel.textContent = card.getAttribute('data-label') || '';
+        if(mFont) mFont.textContent = card.getAttribute('data-font') || '';
 
-        mTools.innerHTML = '';
-        const tools = (card.getAttribute('data-tools') || '').split('·').map(t => t.trim());
-        tools.forEach(t => {
-          if(t) {
-            const span = document.createElement('span');
-            span.className = 'chip';
-            span.textContent = t;
-            mTools.appendChild(span);
+        if(mTools) {
+          mTools.innerHTML = '';
+          const tools = (card.getAttribute('data-tools') || '').split('·').map(t => t.trim());
+          tools.forEach(t => {
+            if(t) mTools.innerHTML += `<div style="margin-bottom:4px;"><span class="chip">${t}</span></div>`;
+          });
+        }
+        
+        if(mColors) {
+          mColors.innerHTML = '';
+          for(let i=1; i<=3; i++) {
+             let col = card.getAttribute(`data-color-${i}`);
+             if(col) {
+                mColors.innerHTML += `<div style="width:16px;height:16px;border-radius:50%;background:${col};border:0.5px solid var(--border);"></div>`;
+             }
           }
-        });
+        }
 
         const modalImgContainer = modalOverlay.querySelector('.modal-img');
         const mImgSrc = card.getAttribute('data-modal-img');
@@ -205,4 +223,85 @@ document.addEventListener('DOMContentLoaded', () => {
   btt.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // HERO MOUSE PARALLAX
+  const heroVisual = document.querySelector('.hero-right');
+  if (heroVisual) {
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 14;
+      const y = (e.clientY / window.innerHeight - 0.5) * 14;
+      heroVisual.style.transform = `translate(${x}px, ${y}px)`;
+      heroVisual.style.transition = 'transform 0.8s ease';
+    });
+  }
+
+  // HERO H1 SPLIT STAGGER
+  document.querySelectorAll('.hero h1 .char').forEach((ch, i) => {
+    ch.style.animationDelay = (i * 40) + 'ms';
+  });
+
+  // MAGNETIC BUTTONS
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0, 0)';
+      btn.style.transition = 'transform 400ms ease';
+    });
+  });
+
+  // STUDIO PARALLAX
+  const callout = document.querySelector('.studio-callout');
+  if (callout) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const rate = scrolled * 0.04;
+      callout.style.backgroundPositionY = rate + 'px';
+    });
+  }
+
+  // CUSTOM CURSOR
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  if (dot && ring) {
+    let ringX = 0, ringY = 0;
+    let mouseX = 0, mouseY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      dot.style.left = mouseX + 'px';
+      dot.style.top  = mouseY + 'px';
+    });
+
+    function animateRing() {
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
+      ring.style.left = ringX + 'px';
+      ring.style.top  = ringY + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+  }
+
+  // CONTACT FORM JS (MAILTO)
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      const subject = encodeURIComponent(`Project Inquiry from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      
+      window.location.href = `mailto:krishna.lpu2025@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
+
 });
