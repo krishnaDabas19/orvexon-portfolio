@@ -69,42 +69,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // MOBILE MENU
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
-  const mobileNavClose = document.querySelector('.mobile-nav-close');
-  
-  if (mobileMenuBtn && mobileNavOverlay && mobileNavClose) {
-    const closeMenu = () => {
-      document.body.classList.remove('menu-open');
+
+  // HAMBURGER AND NAV OVERLAY
+  const hamburger = document.querySelector('.hamburger');
+  const navOverlay = document.getElementById('navOverlay');
+  const navClose = document.getElementById('navClose');
+
+  if (hamburger && navOverlay) {
+    const toggleNav = () => {
+      hamburger.classList.toggle('open');
+      navOverlay.classList.toggle('open');
+      if (navOverlay.classList.contains('open')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     };
-
-    mobileMenuBtn.addEventListener('click', () => {
-      document.body.classList.add('menu-open');
-    });
-
-    mobileNavClose.addEventListener('click', closeMenu);
-
-    const mobileLinks = mobileNavOverlay.querySelectorAll('.mobile-nav-link');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
+    hamburger.addEventListener('click', toggleNav);
+    if (navClose) navClose.addEventListener('click', toggleNav);
+    
+    const overlayLinks = navOverlay.querySelectorAll('a');
+    overlayLinks.forEach(link => {
+      link.addEventListener('click', toggleNav);
     });
   }
 
+
   // 3. STAGGERED FADE-IN ANIMATIONS
-  const fadeEls = document.querySelectorAll('.fade-in');
-  fadeEls.forEach((el, i) => {
-    el.style.transitionDelay = (i * 70) + 'ms';
+  const allFadeEls = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+  allFadeEls.forEach((el, i) => {
+    el.style.transitionDelay = (i % 6 * 80) + 'ms';
   });
-  const observer = new IntersectionObserver((entries) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
-  fadeEls.forEach(el => observer.observe(el));
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  allFadeEls.forEach(el => revealObserver.observe(el));
 
   // PROJECT MODAL
   const modalOverlay = document.getElementById('project-modal');
@@ -268,8 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   if (dot && ring) {
-    let ringX = 0, ringY = 0;
     let mouseX = 0, mouseY = 0;
+    let ringX  = 0, ringY  = 0;
+    let raf;
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
@@ -278,14 +283,15 @@ document.addEventListener('DOMContentLoaded', () => {
       dot.style.top  = mouseY + 'px';
     });
 
-    function animateRing() {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
+    function lerp(a, b, t) { return a + (b - a) * t; }
+    function tick() {
+      ringX = lerp(ringX, mouseX, 0.10);
+      ringY = lerp(ringY, mouseY, 0.10);
       ring.style.left = ringX + 'px';
       ring.style.top  = ringY + 'px';
-      requestAnimationFrame(animateRing);
+      raf = requestAnimationFrame(tick);
     }
-    animateRing();
+    tick();
   }
 
   // CONTACT FORM JS (MAILTO)

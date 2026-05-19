@@ -42,30 +42,34 @@
       </nav>
       <div class="nav-right">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"></button>
-        <button class="mobile-menu-btn" aria-label="Open menu">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE NAV OVERLAY -->
-  <div class="mobile-nav-overlay">
-    <button class="mobile-nav-close" aria-label="Close menu">✕</button>
-    <a href="work.html" class="mobile-nav-link">Work</a>
-    <a href="about.html" class="mobile-nav-link">About</a>
-    <a href="studio.html" class="mobile-nav-link">Studio</a>
-    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <!-- NAV OVERLAY -->
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay-close" id="navClose">✕</button>
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="studio.html">Studio</a>
+    <a href="contact.html">Contact</a>
   </div>
 
   <main>
     <!-- HERO -->
     <section class="container index-hero hero">
-      <div class="fade-in hero-left">
+      <div class="fade-in-left hero-left">
         <div class="hero-eyebrow-badge">
           <span>Founder of Orvexon Studio • Graphic Designer & CSE AIML Student<span class="cursor-blink" aria-hidden="true">▋</span></span>
         </div>
-        <h1 class="hero-h1 fade-in"><span class="char">K</span><span class="char">R</span><span class="char">I</span><span class="char">S</span><span class="char">H</span><span class="char">N</span><span class="char">A</span><br><span style="color: var(--accent);"><span class="char">D</span><span class="char">A</span><span class="char">B</span><span class="char">A</span><span class="char">S</span></span></h1>
+        <h1>
+    <span class="line-1">KRISHNA</span>
+    <br>
+    <span class="line-2">DABAS</span>
+  </h1>
         <div class="hero-body">
           <p>I create modern brand identities, social media visuals, and digital design experiences focused on clean aesthetics, structured layouts, and strong visual communication.</p>
         </div>
@@ -75,7 +79,7 @@
         </div>
         <a href="https://instagram.com/orvexon_studio" class="btn-text" style="margin-top: 20px;" target="_blank" rel="noopener noreferrer">↗ Orvexon Studio on Instagram</a>
       </div>
-      <div class="fade-in hero-visual hero-right">
+      <div class="fade-in-right hero-visual hero-right">
         <div class="hero-orb"></div>
         <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
           <circle cx="160" cy="160" r="140" stroke="#1C1C1C" stroke-width="0.5" fill="none" />

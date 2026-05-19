@@ -42,20 +42,20 @@
       </nav>
       <div class="nav-right">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"></button>
-        <button class="mobile-menu-btn" aria-label="Open menu">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE NAV OVERLAY -->
-  <div class="mobile-nav-overlay">
-    <button class="mobile-nav-close" aria-label="Close menu">✕</button>
-    <a href="work.html" class="mobile-nav-link">Work</a>
-    <a href="about.html" class="mobile-nav-link">About</a>
-    <a href="studio.html" class="mobile-nav-link">Studio</a>
-    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <!-- NAV OVERLAY -->
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay-close" id="navClose">✕</button>
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="studio.html">Studio</a>
+    <a href="contact.html">Contact</a>
   </div>
 
   <main>
@@ -65,7 +65,7 @@
       
       <!-- BIO -->
       <div class="about-bio-grid">
-        <div class="about-bio-text fade-in">
+        <div class="about-bio-text fade-in-left">
           <p>I'm Krishna Dabas, founder of Orvexon Studio and a graphic designer currently pursuing B.Tech in Computer Science with specialization in AI & ML at Lovely Professional University, Punjab.</p>
           <p style="margin-top: 20px;">My interest lies in branding, visual storytelling, social media design, and modern digital aesthetics. I enjoy creating projects that combine creativity with structure — focusing on clean layouts, typography, and consistent visual systems.</p>
           <p style="margin-top: 20px;">Through Orvexon Studio, I work on concept branding projects, campaign visuals, poster designs, and portfolio experiences that reflect a modern and minimal creative approach. Alongside design, my technical background helps me understand digital experiences from both a visual and implementation perspective.</p>
@@ -74,7 +74,7 @@
             "I believe good design is not just about visuals — it's about clarity, consistency, and creating experiences that leave a lasting impression."
           </blockquote>
         </div>
-        <div class="about-facts fade-in">
+        <div class="about-facts fade-in-right">
           <div class="about-fact">
             <span style="font-size: 18px;">🎓</span>
             <div>
