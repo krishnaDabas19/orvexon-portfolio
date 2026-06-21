@@ -30,7 +30,7 @@
     <div class="nav-container">
       <div class="nav-left">
         <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
-          <div class="nav-logo-fallback">KD</div>
+          <img src="assets/logo.png" alt="Orvexon Logo" class="nav-logo-img">
           <span class="nav-wordmark">Krishna Dabas</span>
         </a>
       </div>
@@ -38,6 +38,7 @@
         <a href="work.html" class="nav-link">Work</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="studio.html" class="nav-link">Studio</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="nav-right">
@@ -52,9 +53,10 @@
   <!-- NAV OVERLAY -->
   <div class="nav-overlay" id="navOverlay">
     <button class="nav-overlay-close" id="navClose">✕</button>
-    <a href="index.html">Work</a>
+    <a href="work.html">Work</a>
     <a href="about.html">About</a>
     <a href="studio.html">Studio</a>
+    <a href="testimonials.html">Testimonials</a>
     <a href="contact.html">Contact</a>
   </div>
 
@@ -101,77 +103,143 @@
       </div>
     </section>
 
-    <!-- STUDIO WORK -->
-    <section class="section container">
-      <div class="fade-in" style="margin-bottom: 40px;">
-        <span class="eyebrow">Studio Work</span>
-        <h2 class="section-h2 fade-in" style="margin-top: 8px;">ALL PROJECTS</h2>
+    <!-- PROCESS SECTION -->
+    <section id="process" class="section container fade-in" style="border-top: 0.5px solid var(--border); padding-top: 100px;">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <span class="eyebrow">How We Work</span>
+        <h2 class="section-h2" style="margin-top: 8px;">OUR PROCESS</h2>
+        <p style="margin: 8px auto 0; font-family: var(--font-body); font-weight: 300; font-size: 14px; color: var(--text-mid); max-width: 480px;">A structured approach designed to ensure clarity, alignment, and high-quality results from start to finish.</p>
+      </div>
+      
+      <div class="timeline-grid">
+        <!-- Step 1 -->
+        <div class="timeline-card glass-card fade-in">
+          <div class="timeline-header">
+            <span class="timeline-num">01</span>
+            <span class="timeline-tag">Phase 1</span>
+          </div>
+          <h3 class="timeline-title">Discovery</h3>
+          <p class="timeline-desc">We start by understanding your business, target audience, core objectives, and project challenges in depth.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="timeline-card glass-card fade-in">
+          <div class="timeline-header">
+            <span class="timeline-num">02</span>
+            <span class="timeline-tag">Phase 2</span>
+          </div>
+          <h3 class="timeline-title">Research</h3>
+          <p class="timeline-desc">Analyzing competitors, industry trends, and strategic positioning opportunities to build a solid foundation.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="timeline-card glass-card fade-in">
+          <div class="timeline-header">
+            <span class="timeline-num">03</span>
+            <span class="timeline-tag">Phase 3</span>
+          </div>
+          <h3 class="timeline-title">Design</h3>
+          <p class="timeline-desc">Developing visual concepts, systems, guidelines, and user experiences tailored to your brand personality.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="timeline-card glass-card fade-in">
+          <div class="timeline-header">
+            <span class="timeline-num">04</span>
+            <span class="timeline-tag">Phase 4</span>
+          </div>
+          <h3 class="timeline-title">Revisions</h3>
+          <p class="timeline-desc">A collaborative feedback cycle where we test, iterate, and refine the design details to perfection.</p>
+        </div>
+        <!-- Step 5 -->
+        <div class="timeline-card glass-card fade-in">
+          <div class="timeline-header">
+            <span class="timeline-num">05</span>
+            <span class="timeline-tag">Phase 5</span>
+          </div>
+          <h3 class="timeline-title">Delivery</h3>
+          <p class="timeline-desc">Providing fully documented style guides and high-resolution assets optimized for immediate real-world use.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERABLES SECTION -->
+    <section id="deliverables" class="section container fade-in" style="border-top: 0.5px solid var(--border); padding-top: 100px;">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <span class="eyebrow">Value Delivered</span>
+        <h2 class="section-h2" style="margin-top: 8px;">WHAT CLIENTS RECEIVE</h2>
+        <p style="margin: 8px auto 0; font-family: var(--font-body); font-weight: 300; font-size: 14px; color: var(--text-mid); max-width: 480px;">Every engagement is backed by detailed, production-ready deliverables. You get everything needed to deploy your brand confidently.</p>
       </div>
 
-      <div class="grid-2">
-        <!-- Project 1 -->
-        <div class="project-card fade-in" data-filter-cat="branding" data-title="Orvexon Studio Brand Identity" data-category="Branding · Personal" data-desc="Complete brand identity — logo, color system, and typography." data-tools="Illustrator · Figma" data-objective="Build a complete visual identity for Orvexon Studio from scratch." data-process="Started with mood boarding, then moved to logo exploration in Illustrator. Developed a full color system and type pairing to create a consistent design language." data-decision="Chose geometric forms over organic — cleaner at small sizes and digital-first." data-label="Personal Branding Project" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/1.1.png">
-          <div class="project-card-img"><img src="assets/1.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Branding · Personal</span>
-            <h3 class="project-card-title">Orvexon Studio Brand Identity</h3>
-            <p class="project-card-desc">Complete brand identity — logo, color system, and typography.</p>
-            <span class="project-card-link">Open →</span>
-          </div>
+      <div class="grid-3">
+        <div class="deliverables-box glass-card fade-in">
+          <h3 class="deliverables-box-title">Brand Identity Package</h3>
+          <ul class="deliverables-checklist">
+            <li><span>✓</span> Scalable Vector Logos (SVG, EPS, PDF)</li>
+            <li><span>✓</span> RGB/CMYK Color Palette Specifications</li>
+            <li><span>✓</span> Primary, Secondary & Accent Typography Rules</li>
+            <li><span>✓</span> Comprehensive Brand Style Guide Guidelines</li>
+            <li><span>✓</span> Logo Usage Do's and Don'ts Document</li>
+          </ul>
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card fade-in" data-filter-cat="social" data-title="Fitness Brand Social Campaign" data-category="Social Media" data-desc="Instagram post series for a fictional fitness brand." data-tools="Canva · Photoshop" data-objective="Design a consistent, high-energy Instagram feed for a fictional fitness brand." data-process="Developed a 6-post series with consistent color, grid alignment, and typography. Focused on readability at mobile size and scroll-stopping visual hierarchy." data-decision="Kept text minimal — let bold imagery do the heavy lifting." data-label="Creative Exploration" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/2.1.png">
-          <div class="project-card-img"><img src="assets/2.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Social Media</span>
-            <h3 class="project-card-title">Fitness Brand Social Campaign</h3>
-            <p class="project-card-desc">Instagram post series for a fictional fitness brand.</p>
-            <span class="project-card-link">Open →</span>
-          </div>
+        <div class="deliverables-box glass-card fade-in">
+          <h3 class="deliverables-box-title">Social Content System</h3>
+          <ul class="deliverables-checklist">
+            <li><span>✓</span> Editable Templates (Figma, Canva, or PSD)</li>
+            <li><span>✓</span> Structured Content Grid Blueprint Layouts</li>
+            <li><span>✓</span> High-Contrast Stories & Banners Graphics</li>
+            <li><span>✓</span> Typography-First Carousel Presentation Assets</li>
+            <li><span>✓</span> Custom Campaign Iconography & Accents</li>
+          </ul>
         </div>
-
-        <!-- Project 3 -->
-        <div class="project-card fade-in" data-filter-cat="branding" data-title="Tech Startup Minimal Logo" data-category="Identity · Concept" data-desc="Minimal logo for a fictional AI-focused startup." data-tools="Illustrator" data-objective="Create a scalable, minimal logo for a fictional AI/tech company." data-process="Explored geometric mark concepts. Final mark uses negative space to suggest both a circuit and a forward-moving direction." data-decision="Black and white only — versatile across all contexts." data-label="Concept Project" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/3.1.png">
-          <div class="project-card-img"><img src="assets/3.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Identity · Concept</span>
-            <h3 class="project-card-title">Tech Startup Minimal Logo</h3>
-            <p class="project-card-desc">Minimal logo for a fictional AI-focused startup.</p>
-            <span class="project-card-link">Open →</span>
-          </div>
+        <div class="deliverables-box glass-card fade-in">
+          <h3 class="deliverables-box-title">Digital Website Assets</h3>
+          <ul class="deliverables-checklist">
+            <li><span>✓</span> Clean, Semantic HTML5 & CSS3 Source Code</li>
+            <li><span>✓</span> Interactive Desktop & Mobile UI Mockup Layouts</li>
+            <li><span>✓</span> Optimized Web Graphics & Icon Assets (SVG/WebP)</li>
+            <li><span>✓</span> Complete Typography Style Sheet Variables</li>
+            <li><span>✓</span> Dynamic Interaction & Scrolling Logic (JS)</li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <!-- Project 4 -->
-        <div class="project-card fade-in" data-filter-cat="poster" data-title="Event Awareness Poster" data-category="Poster Design" data-desc="High-impact awareness poster — strong visual storytelling." data-tools="Photoshop · Canva" data-objective="Design a visually arresting poster for a college awareness event." data-process="Typography-first approach — headline as the hero. Used contrast and negative space to guide the viewer's eye through the hierarchy." data-decision="Limited palette to two colors for maximum impact." data-label="Practice Project" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/4.1.png">
-          <div class="project-card-img"><img src="assets/4.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Poster Design</span>
-            <h3 class="project-card-title">Event Awareness Poster</h3>
-            <p class="project-card-desc">High-impact awareness poster — strong visual storytelling.</p>
-            <span class="project-card-link">Open →</span>
-          </div>
+    <!-- WHY CHOOSE SECTION -->
+    <section id="why-choose" class="section container fade-in" style="border-top: 0.5px solid var(--border); padding-top: 100px; padding-bottom: 100px;">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <span class="eyebrow">Studio Edge</span>
+        <h2 class="section-h2" style="margin-top: 8px;">WHY ORVEXON STUDIO</h2>
+        <p style="margin: 8px auto 0; font-family: var(--font-body); font-weight: 300; font-size: 14px; color: var(--text-mid); max-width: 480px;">We bridge the gap between creative visual artistry and clean technical engineering.</p>
+      </div>
+
+      <div class="grid-4" style="gap: 24px;">
+        <div class="value-card glass-card fade-in">
+          <div class="value-card-icon">🎯</div>
+          <h3 class="value-card-title">Strategic Branding</h3>
+          <p class="value-card-desc">We don't just make things look pretty. We align colors, type, and layout with your business goals to build credibility.</p>
         </div>
-
-        <!-- Project 5 -->
-        <div class="project-card fade-in" data-filter-cat="web" data-title="Portfolio Website" data-category="Web · Dev" data-desc="Personal portfolio designed and built from scratch." data-tools="HTML · CSS · JS · Figma" data-objective="Design and build a full portfolio site that reflects Orvexon Studio's identity." data-process="Started with Figma wireframes, then built mobile-first in HTML/CSS. Implemented dark/light mode, smooth animations, and a multi-page structure." data-decision="Multi-page over SPA — cleaner URLs, better SEO, simpler codebase." data-label="Real Project" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/5.1.png">
-          <div class="project-card-img"><img src="assets/5.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Web · Dev</span>
-            <h3 class="project-card-title">Portfolio Website</h3>
-            <p class="project-card-desc">Personal portfolio designed and built from scratch.</p>
-            <span class="project-card-link">Open →</span>
-          </div>
+        <div class="value-card glass-card fade-in">
+          <div class="value-card-icon">⚡</div>
+          <h3 class="value-card-title">Vanilla Engineering</h3>
+          <p class="value-card-desc">No heavy framework bloat. We write clean, optimized, semantic code that is lightning fast and easy to maintain.</p>
+        </div>
+        <div class="value-card glass-card fade-in">
+          <div class="value-card-icon">🤝</div>
+          <h3 class="value-card-title">Founder Direct</h3>
+          <p class="value-card-desc">Work directly with Krishna. Direct communication means faster feedback loops, fewer errors, and a personal commitment to quality.</p>
+        </div>
+        <div class="value-card glass-card fade-in">
+          <div class="value-card-icon">🔍</div>
+          <h3 class="value-card-title">Pixel Perfection</h3>
+          <p class="value-card-desc">Obsessed with typographic details, margins, mobile responsive behaviors, and micro-interactions that feel premium.</p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT TEASER -->
     <section class="contact-teaser fade-in container">
-      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 64px; color: var(--text); letter-spacing: 2px;">START A PROJECT</h2>
-      <p class="fade-in" style="margin: 14px auto; max-width: 420px; font-family: var(--font-body); font-weight: 300; font-size: 15px; color: var(--text-mid);">Open to collaborations, freelance, and opportunities.</p>
+      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 64px; color: var(--text); letter-spacing: 2px;">Ready to Elevate Your Brand?</h2>
+      <p class="fade-in" style="margin: 14px auto; max-width: 520px; font-family: var(--font-body); font-weight: 300; font-size: 15px; color: var(--text-mid);">Whether you need branding, social media design, or a modern website, Orvexon Studio is ready to help.</p>
       <div style="margin-top: 36px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a href="contact.html" class="btn btn-primary">Send a Message</a>
+        <a href="contact.html" class="btn btn-primary">Start a Project</a>
         <a href="https://linkedin.com/in/krishna-dabas" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
       </div>
     </section>
@@ -182,13 +250,14 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-left fade-in">
-          <div class="nav-logo-fallback" style="width:20px;height:20px;font-size:10px;">KD</div>
+          <img src="assets/logo.png" alt="Orvexon Logo" class="nav-logo-img" style="width:20px;height:20px;">
           <span class="footer-left-text">Krishna Dabas · Orvexon Studio</span>
         </div>
         <div class="footer-center fade-in">
           <a href="work.html">Work</a>
           <a href="about.html">About</a>
           <a href="studio.html">Studio</a>
+          <a href="testimonials.html">Testimonials</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-right fade-in">
@@ -215,7 +284,7 @@
         <p class="modal-desc" style="font-family: var(--font-body); font-weight: 300; font-size: 15px; color: var(--text-mid);"></p>
       </div>
 
-      <div class="modal-details-row" style="display: grid; grid-template-columns: repeat(3, 1fr); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 16px 0; margin: 32px 0;">
+      <div class="modal-details-row">
         <div>
           <span class="modal-section-label">Year</span>
           <div class="modal-year" style="font-family: var(--font-body); font-weight: 500; font-size: 14px; color: var(--text);"></div>
@@ -231,12 +300,12 @@
       </div>
       
       <div class="modal-section">
-        <span class="modal-section-label">Objective</span>
+        <span class="modal-section-label">Challenge</span>
         <div class="modal-section-content modal-obj"></div>
       </div>
       
       <div class="modal-section">
-        <span class="modal-section-label">Design Direction</span>
+        <span class="modal-section-label">Strategy</span>
         <div class="modal-section-content modal-direction"></div>
       </div>
       
@@ -249,11 +318,11 @@
       </div>
       
       <div class="modal-section">
-        <span class="modal-section-label">Process</span>
+        <span class="modal-section-label">Solution & Deliverables</span>
         <div class="modal-section-content modal-process"></div>
       </div>
       
-      <div class="modal-mockups" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0;">
+      <div class="modal-mockups">
         <div style="aspect-ratio: 4/3; background: var(--surface-2); border-radius: var(--radius-md);"></div>
         <div style="aspect-ratio: 4/3; background: var(--surface-2); border-radius: var(--radius-md);"></div>
       </div>

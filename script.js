@@ -202,8 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const filter = btn.getAttribute('data-filter');
         
         projectCards.forEach(card => {
-          const fCat = card.getAttribute('data-filter-cat');
-          if (filter === 'all' || fCat === filter) {
+          const fCat = card.getAttribute('data-filter-cat') || '';
+          const cats = fCat.split(' ').map(c => c.trim());
+          if (filter === 'all' || cats.includes(filter)) {
             card.classList.remove('hidden');
           } else {
             card.classList.add('hidden');
@@ -309,5 +310,125 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `mailto:krishna.lpu2025@gmail.com?subject=${subject}&body=${body}`;
     });
   }
+
+  // TESTIMONIAL CAROUSEL
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.carousel-dots .dot');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  if (slides.length > 0) {
+    let currentIndex = 0;
+    let autoSlideInterval;
+    
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+          slide.classList.remove('exit');
+        } else if (slide.classList.contains('active')) {
+          slide.classList.remove('active');
+          slide.classList.add('exit');
+          setTimeout(() => {
+            slide.classList.remove('exit');
+          }, 450);
+        } else {
+          slide.classList.remove('active', 'exit');
+        }
+      });
+      
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      currentIndex = index;
+    };
+    
+    const nextSlide = () => {
+      let index = (currentIndex + 1) % slides.length;
+      showSlide(index);
+    };
+    
+    const prevSlide = () => {
+      let index = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(index);
+    };
+    
+    const startAutoSlide = () => {
+      stopAutoSlide();
+      autoSlideInterval = setInterval(nextSlide, 5000);
+    };
+    
+    const stopAutoSlide = () => {
+      if (autoSlideInterval) clearInterval(autoSlideInterval);
+    };
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
+      });
+    }
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide();
+      });
+    }
+    
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.getAttribute('data-index'), 10);
+        showSlide(index);
+        startAutoSlide();
+      });
+    });
+    
+    startAutoSlide();
+  }
+
+  // FAQ ACCORDION
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const content = item.querySelector('.accordion-content');
+      
+      // Close other items if open
+      document.querySelectorAll('.accordion-item').forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+          const otherContent = otherItem.querySelector('.accordion-content');
+          if (otherContent) otherContent.style.maxHeight = '0';
+        }
+      });
+      
+      // Toggle current item
+      const isActive = item.classList.contains('active');
+      if (isActive) {
+        item.classList.remove('active');
+        if (content) content.style.maxHeight = '0';
+      } else {
+        item.classList.add('active');
+        if (content) content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // BEFORE-AFTER SLIDER LOGIC
+  const beforeAfterSliders = document.querySelectorAll('.before-after-slider');
+  beforeAfterSliders.forEach(slider => {
+    const handle = slider.querySelector('.slider-handle');
+    const imageAfter = slider.querySelector('.image-after');
+    const divider = slider.querySelector('.slider-divider');
+
+    if (handle && imageAfter && divider) {
+      handle.addEventListener('input', (e) => {
+        const val = e.target.value;
+        imageAfter.style.width = `${val}%`;
+        divider.style.left = `${val}%`;
+      });
+    }
+  });
 
 });

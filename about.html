@@ -30,7 +30,7 @@
     <div class="nav-container">
       <div class="nav-left">
         <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
-          <div class="nav-logo-fallback">KD</div>
+          <img src="assets/logo.png" alt="Orvexon Logo" class="nav-logo-img">
           <span class="nav-wordmark">Krishna Dabas</span>
         </a>
       </div>
@@ -38,6 +38,7 @@
         <a href="work.html" class="nav-link">Work</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="studio.html" class="nav-link">Studio</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="nav-right">
@@ -52,9 +53,10 @@
   <!-- NAV OVERLAY -->
   <div class="nav-overlay" id="navOverlay">
     <button class="nav-overlay-close" id="navClose">✕</button>
-    <a href="index.html">Work</a>
+    <a href="work.html">Work</a>
     <a href="about.html">About</a>
     <a href="studio.html">Studio</a>
+    <a href="testimonials.html">Testimonials</a>
     <a href="contact.html">Contact</a>
   </div>
 
@@ -116,7 +118,7 @@
       
       <!-- DIFFERENTIATION -->
       <div class="about-different fade-in" style="margin-top: 48px; border-top: 0.5px solid var(--border); padding-top: 48px;">
-        <div style="display: flex; flex-direction: row; gap: 32px; flex-wrap: wrap;">
+        <div class="differentiators-row">
           <div style="flex: 1; min-width: 200px;">
             <div style="font-family: 'Bebas Neue', sans-serif; font-size: 40px; color: var(--accent); line-height: 1;">01</div>
             <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 13px; color: var(--text); margin-top: 6px;">Design + Code</div>
@@ -155,7 +157,7 @@
         <h2 class="section-h2 fade-in" style="margin-top: 8px;">WHAT I WORK WITH</h2>
       </div>
       <div class="fade-in">
-        <div class="skills-category-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div class="skills-category-grid">
           <div class="skill-category-card" style="background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 28px;">
             <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px;">DESIGN</div>
             <div style="border-top: 0.5px solid var(--border); margin: 12px 0;"></div>
@@ -210,6 +212,31 @@
       </div>
     </section>
 
+    <!-- DESIGN PHILOSOPHY SECTION -->
+    <section id="philosophy" class="section container fade-in" style="border-top: 0.5px solid var(--border); padding-top: 100px;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="eyebrow" style="display: block; margin-bottom: 16px;">Our Ethos</span>
+        <h2 class="section-h2" style="margin-bottom: 32px;">DESIGN PHILOSOPHY</h2>
+        
+        <div class="philosophy-grid">
+          <div>
+            <h3 style="font-family: var(--font-body); font-weight: var(--fw-bold); font-size: 18px; margin-bottom: 12px; color: var(--text);">Intentional Constraints</h3>
+            <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-mid); line-height: 1.75; margin-bottom: 24px;">I believe that a limited color palette and a clean, structured typographic hierarchy lead to stronger, more memorable visual systems. Creativity thrives when boundaries are clear.</p>
+            
+            <h3 style="font-family: var(--font-body); font-weight: var(--fw-bold); font-size: 18px; margin-bottom: 12px; color: var(--text);">Form Follows Purpose</h3>
+            <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-mid); line-height: 1.75;">A design must first solve the objective before it can be beautiful. Aesthetics should elevate the message, not distract from it.</p>
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-body); font-weight: var(--fw-bold); font-size: 18px; margin-bottom: 12px; color: var(--text);">Detail Obsession</h3>
+            <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-mid); line-height: 1.75; margin-bottom: 24px;">The difference between good design and premium design lies in the final 5%. I focus on alignment precision, text line heights, padding details, and subtle motion feedback.</p>
+            
+            <h3 style="font-family: var(--font-body); font-weight: var(--fw-bold); font-size: 18px; margin-bottom: 12px; color: var(--text);">Clean Architecture</h3>
+            <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-mid); line-height: 1.75;">Whether it is a brand system guidelines document or standard-compliant code, clean and well-structured foundations ensure longevity and scalability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- WHAT I DO (full size) -->
     <section class="section container" style="padding-top: 0;">
       <div class="fade-in" style="margin-bottom: 40px;">
@@ -218,31 +245,31 @@
       <div class="grid-4 fade-in">
         <div class="service-card fade-in" style="padding: 28px;">
           <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3 class="service-card-title">Brand Identity Design</h3>
+          <p class="service-card-desc">Build a recognizable visual identity through logos, typography, color systems, and brand guidelines.</p>
+        </div>
+        <div class="service-card fade-in" style="padding: 28px;">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
           </div>
           <h3 class="service-card-title">Social Media Design</h3>
-          <p class="service-card-desc">Instagram post series, story templates, and brand-consistent content designed for scroll-stopping visual impact.</p>
+          <p class="service-card-desc">Professional content systems that maintain consistency and strengthen your online presence.</p>
         </div>
         <div class="service-card fade-in" style="padding: 28px;">
           <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 22 12 12 22 2 12 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="service-card-title">Brand Identity</h3>
-          <p class="service-card-desc">Logo design, color systems, and typography pairings for concept brands and self-initiated studio projects.</p>
+          <h3 class="service-card-title">Website Design</h3>
+          <p class="service-card-desc">Modern and responsive websites designed to communicate clearly and convert visitors into customers.</p>
         </div>
         <div class="service-card fade-in" style="padding: 28px;">
           <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="4" y1="6" x2="20" y2="6"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-          <h3 class="service-card-title">Poster & Banner</h3>
-          <p class="service-card-desc">Campaign posters, event banners, and awareness designs built around strong typographic hierarchy and minimal layouts.</p>
-        </div>
-        <div class="service-card fade-in" style="padding: 28px;">
-          <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg>
-          </div>
-          <h3 class="service-card-title">UI Mockups</h3>
-          <p class="service-card-desc">Static screen designs and wireframes for app and web concepts — structured, clean, and frontend-ready.</p>
+          <h3 class="service-card-title">Packaging Design</h3>
+          <p class="service-card-desc">Thoughtful packaging experiences that elevate products and create stronger first impressions.</p>
         </div>
       </div>
     </section>
@@ -308,13 +335,14 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-left fade-in">
-          <div class="nav-logo-fallback" style="width:20px;height:20px;font-size:10px;">KD</div>
+          <img src="assets/logo.png" alt="Orvexon Logo" class="nav-logo-img" style="width:20px;height:20px;">
           <span class="footer-left-text">Krishna Dabas · Orvexon Studio</span>
         </div>
         <div class="footer-center fade-in">
           <a href="work.html">Work</a>
           <a href="about.html">About</a>
           <a href="studio.html">Studio</a>
+          <a href="testimonials.html">Testimonials</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-right fade-in">

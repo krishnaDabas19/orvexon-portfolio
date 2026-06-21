@@ -30,7 +30,7 @@
     <div class="nav-container">
       <div class="nav-left">
         <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
-          <div class="nav-logo-fallback">KD</div>
+          <img src="assets/logo.png" alt="Orvexon Logo" class="nav-logo-img">
           <span class="nav-wordmark">Krishna Dabas</span>
         </a>
       </div>
@@ -38,6 +38,7 @@
         <a href="work.html" class="nav-link">Work</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="studio.html" class="nav-link">Studio</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="nav-right">
@@ -52,32 +53,32 @@
   <!-- NAV OVERLAY -->
   <div class="nav-overlay" id="navOverlay">
     <button class="nav-overlay-close" id="navClose">✕</button>
-    <a href="index.html">Work</a>
+    <a href="work.html">Work</a>
     <a href="about.html">About</a>
     <a href="studio.html">Studio</a>
+    <a href="testimonials.html">Testimonials</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <main>
-    <!-- HERO -->
+    <!-- SECTION 1 — HERO -->
     <section class="container index-hero hero">
       <div class="fade-in-left hero-left">
         <div class="hero-eyebrow-badge">
-          <span>Founder of Orvexon Studio • Graphic Designer & CSE AIML Student<span class="cursor-blink" aria-hidden="true">▋</span></span>
+          <span>Premium Branding & Design Agency<span class="cursor-blink" aria-hidden="true">▋</span></span>
         </div>
-        <h1>
-    <span class="line-1">KRISHNA</span>
-    <br>
-    <span class="line-2">DABAS</span>
-  </h1>
+        <h1 class="hero-h1">
+          <span class="line-1">Designing Brands</span>
+          <br>
+          <span class="line-2">That People Remember</span>
+        </h1>
         <div class="hero-body">
-          <p>I create modern brand identities, social media visuals, and digital design experiences focused on clean aesthetics, structured layouts, and strong visual communication.</p>
+          <p>Orvexon Studio helps startups, creators, and businesses build a premium brand presence through strategic branding, social media design, and modern websites.</p>
         </div>
         <div class="hero-buttons">
-          <a href="work.html" class="btn btn-primary">View My Work</a>
-          <a href="contact.html" class="btn btn-ghost">Contact Me</a>
+          <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
+          <a href="#contact" class="btn btn-ghost">Start a Project</a>
         </div>
-        <a href="https://instagram.com/orvexon_studio" class="btn-text" style="margin-top: 20px;" target="_blank" rel="noopener noreferrer">↗ Orvexon Studio on Instagram</a>
       </div>
       <div class="fade-in-right hero-visual hero-right">
         <div class="hero-orb"></div>
@@ -100,135 +101,431 @@
       </div>
     </section>
 
-    <!-- STUDIO CALLOUT -->
-    <section class="studio-callout fade-in">
-      <div class="container studio-callout-inner fade-in">
-        <div>
-          <span class="eyebrow" style="color: var(--accent);">⬡  Studio</span>
-          <h2 class="section-h2 fade-in" style="margin-top: 8px;">ORVEXON STUDIO</h2>
-          <p class="fade-in" style="margin-top: 10px; max-width: 420px; font-family: var(--font-body); font-weight: 300; font-size: 15px; color: var(--text-mid); line-height: 1.85;">A independent design studio focused on clean branding, social media design, and UI-driven brand design and frontend-ready assets.</p>
-          <div style="font-family: var(--font-body); font-weight: 300; font-size: 11px; color: var(--text-hint); letter-spacing: 2px; text-transform: uppercase; margin-top: 14px;">Founded 2024 · Delhi, India</div>
+    <!-- SECTION 2 — TRUST BAR -->
+    <section class="trust-bar fade-in">
+      <div class="trust-bar-track">
+        <div class="trust-bar-group">
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Branding
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Social Media Design
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Website Design
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Packaging Design
+          </div>
         </div>
-        <div class="studio-callout-actions">
-          <a href="studio.html" class="btn btn-primary">Explore Studio</a>
-          <a href="https://instagram.com/orvexon_studio" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <!-- Duplicated for seamless scrolling -->
+        <div class="trust-bar-group" aria-hidden="true">
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Branding
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Social Media Design
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Website Design
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Packaging Design
+          </div>
+        </div>
+        <!-- Triplicated for seamless scrolling on large screens -->
+        <div class="trust-bar-group" aria-hidden="true">
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Branding
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Social Media Design
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Website Design
+          </div>
+          <div class="trust-bar-item">
+            <svg class="trust-star" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor" />
+            </svg>
+            Packaging Design
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SELECTED WORK -->
-    <section class="section container">
-      <div class="fade-in" style="margin-bottom: 40px;">
-        <span class="eyebrow">Selected Work</span>
-        <h2 class="section-h2 fade-in" style="margin-top: 8px;">FEATURED PROJECTS</h2>
+    <!-- SECTION 3 — ABOUT ORVEXON -->
+    <section id="about" class="section container fade-in" style="padding-top: 120px; padding-bottom: 80px;">
+      <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <span class="eyebrow">Meet the Founder</span>
+        <h2 class="section-h2" style="margin-top: 8px;">Hi, I'm Krishna Dabas, founder of Orvexon Studio.</h2>
+        <p style="max-width: 600px; margin: 24px auto 0 auto; line-height: 1.85;">I help businesses create premium branding, social media systems, and websites that build trust and leave a lasting impression.</p>
+        <div class="people-hire-people" style="margin: 24px 0; font-family: var(--font-body); font-weight: var(--fw-bold); font-size: 18px; color: var(--accent); letter-spacing: 1px; text-transform: uppercase;">
+          "People hire people."
+        </div>
+        
+        <!-- Signature Visual Element -->
+        <div class="signature-container" style="display: flex; justify-content: center; width: 100%;">
+          <svg class="signature-svg" viewBox="0 0 200 60" width="160" height="48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15,35 C35,15 45,45 65,25 C85,5 95,45 115,35 C135,25 145,15 175,25" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            <text x="15" y="52" font-family="'Raleway', sans-serif" font-size="9" fill="var(--text-mid)" letter-spacing="2">KRISHNA DABAS</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — WHAT WE DO -->
+    <section id="services" class="section container fade-in" style="padding-top: 60px;">
+      <div style="margin-bottom: 40px;">
+        <span class="eyebrow">Services</span>
+        <h2 class="section-h2" style="margin-top: 8px;">WHAT WE DO</h2>
       </div>
       
-      <div class="grid-2 fade-in">
-        <!-- Project 1 -->
-        <div class="project-card fade-in" data-filter-cat="branding" data-title="Orvexon Studio Brand Identity" data-category="Branding · Personal" data-desc="Complete brand identity — logo, color system, and typography." data-tools="Illustrator · Figma" data-objective="Build a complete visual identity for Orvexon Studio from scratch." data-process="Started with mood boarding, then moved to logo exploration in Illustrator. Developed a full color system and type pairing to create a consistent design language." data-decision="Chose geometric forms over organic — cleaner at small sizes and digital-first." data-label="Personal Branding Project" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/1.1.png">
-          <div class="project-card-img"><img src="assets/1.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Branding · Personal</span>
-            <h3 class="project-card-title">Orvexon Studio Brand Identity</h3>
-            <p class="project-card-desc">Complete brand identity — logo, color system, and typography.</p>
-            <span class="project-card-link">Open →</span>
+      <div class="grid-4">
+        <!-- Service 1 -->
+        <div class="service-card glass-card fade-in">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
           </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card fade-in" data-filter-cat="social" data-title="Fitness Brand Social Campaign" data-category="Social Media" data-desc="Instagram post series for a fictional fitness brand." data-tools="Canva · Photoshop" data-objective="Design a consistent, high-energy Instagram feed for a fictional fitness brand." data-process="Developed a 6-post series with consistent color, grid alignment, and typography. Focused on readability at mobile size and scroll-stopping visual hierarchy." data-decision="Kept text minimal — let bold imagery do the heavy lifting." data-label="Creative Exploration" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/2.1.png">
-          <div class="project-card-img"><img src="assets/2.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Social Media</span>
-            <h3 class="project-card-title">Fitness Brand Social Campaign</h3>
-            <p class="project-card-desc">Instagram post series for a fictional fitness brand.</p>
-            <span class="project-card-link">Open →</span>
+          <h3 class="service-card-title">Brand Identity Design</h3>
+          <p class="service-card-desc">Build a recognizable visual identity through logos, typography, color systems, and brand guidelines.</p>
+          <div class="service-deliverables">
+            <span class="deliverables-label">Includes:</span>
+            <ul class="deliverables-list">
+              <li>Logo Design</li>
+              <li>Color System</li>
+              <li>Typography</li>
+              <li>Brand Guidelines</li>
+            </ul>
           </div>
         </div>
         
-        <!-- Project 5 -->
-        <div class="project-card fade-in featured-project" data-filter-cat="web" data-title="Portfolio Website" data-category="Web · Dev" data-desc="Personal portfolio designed and built from scratch." data-tools="HTML · CSS · JS · Figma" data-objective="Design and build a full portfolio site that reflects Orvexon Studio's identity." data-process="Started with Figma wireframes, then built mobile-first in HTML/CSS. Implemented dark/light mode, smooth animations, and a multi-page structure." data-decision="Multi-page over SPA — cleaner URLs, better SEO, simpler codebase." data-label="Real Project" data-year="2024" data-role="Designer" data-overview="A complete visual system." data-direction="Minimalist and tech-focused." data-outcome="Increased brand recognition." data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" data-modal-img="assets/5.1.png">
-          <div class="project-card-img"><div class="featured-badge">Featured</div><img src="assets/5.0.png" alt="" loading="lazy" onerror="this.outerHTML='<span>[ preview ]</span>'"></div>
-          <div class="project-card-info">
-            <span class="project-card-category">Web · Dev</span>
-            <h3 class="project-card-title">Portfolio Website</h3>
-            <p class="project-card-desc">Personal portfolio designed and built from scratch.</p>
-            <div style="margin-top: 16px; display: flex; gap: 12px;"><a href="#" class="project-card-link" style="margin-top:0;">GitHub ↗</a><a href="#" class="project-card-link" style="margin-top:0;">Live Site ↗</a></div>
-          </div>
-        </div>
-      </div>
-      
-      <div style="text-align: center; margin-top: 40px;" class="fade-in">
-        <a href="work.html" class="btn btn-ghost">View All Work →</a>
-      </div>
-    </section>
-
-    <!-- SKILLS STRIP -->
-    <section class="section container" style="padding-top: 0;">
-      <div class="fade-in">
-        <span class="eyebrow">What I Work With</span>
-        <div class="skills-strip fade-in">
-          <span class="chip skill-chip">Brand Identity</span>
-          <span class="chip skill-chip">Social Media Design</span>
-          <span class="chip skill-chip">Figma</span>
-          <span class="chip skill-chip">Adobe Photoshop</span>
-          <span class="chip skill-chip">Adobe Illustrator</span>
-          <span class="chip skill-chip">CorelDRAW</span>
-          <span class="chip skill-chip">Canva</span>
-          <span class="chip skill-chip">HTML & CSS</span>
-          <span class="chip skill-chip">UI Mockups</span>
-          <span class="chip skill-chip">Visual Systems</span>
-        </div>
-        <a href="about.html" class="btn-text fade-in" style="margin-top: 20px;">Full profile →</a>
-      </div>
-    </section>
-    
-    <!-- WHAT I DO -->
-    <section class="section container" style="padding-top: 0;">
-      <div class="fade-in" style="margin-bottom: 40px;">
-        <span class="eyebrow">What I Do</span>
-        <h2 class="section-h2 fade-in" style="margin-top: 8px;">SERVICES</h2>
-      </div>
-      
-      <div class="grid-4 fade-in">
-        <div class="service-card fade-in">
+        <!-- Service 2 -->
+        <div class="service-card glass-card fade-in">
           <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
           </div>
           <h3 class="service-card-title">Social Media Design</h3>
-          <p class="service-card-desc">Instagram post series, story templates, and brand-consistent content designed for scroll-stopping visual impact.</p>
-        </div>
-        <div class="service-card fade-in">
-          <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><polygon points="12 2 22 12 12 22 2 12 12 2"></polygon></svg>
+          <p class="service-card-desc">Professional content systems that maintain consistency and strengthen your online presence.</p>
+          <div class="service-deliverables">
+            <span class="deliverables-label">Includes:</span>
+            <ul class="deliverables-list">
+              <li>Content Templates</li>
+              <li>Campaign Graphics</li>
+              <li>Carousel Layouts</li>
+              <li>Banner Systems</li>
+            </ul>
           </div>
-          <h3 class="service-card-title">Brand Identity</h3>
-          <p class="service-card-desc">Logo design, color systems, and typography pairings for concept brands and self-initiated studio projects.</p>
         </div>
-        <div class="service-card fade-in">
+        
+        <!-- Service 3 -->
+        <div class="service-card glass-card fade-in">
           <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="4" y1="6" x2="20" y2="6"></line></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="service-card-title">Poster & Banner</h3>
-          <p class="service-card-desc">Campaign posters, event banners, and awareness designs built around strong typographic hierarchy and minimal layouts.</p>
+          <h3 class="service-card-title">Website Design</h3>
+          <p class="service-card-desc">Modern and responsive websites designed to communicate clearly and convert visitors into customers.</p>
+          <div class="service-deliverables">
+            <span class="deliverables-label">Includes:</span>
+            <ul class="deliverables-list">
+              <li>UI Design</li>
+              <li>Responsive Layout</li>
+              <li>Landing Pages</li>
+              <li>Portfolio Websites</li>
+            </ul>
+          </div>
         </div>
-        <div class="service-card fade-in">
+        
+        <!-- Service 4 -->
+        <div class="service-card glass-card fade-in">
           <div class="service-card-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-          <h3 class="service-card-title">UI Mockups</h3>
-          <p class="service-card-desc">Static screen designs and wireframes for app and web concepts — structured, clean, and frontend-ready.</p>
+          <h3 class="service-card-title">Packaging Design</h3>
+          <p class="service-card-desc">Thoughtful packaging experiences that elevate products and create stronger first impressions.</p>
+          <div class="service-deliverables">
+            <span class="deliverables-label">Includes:</span>
+            <ul class="deliverables-list">
+              <li>Product Labels</li>
+              <li>Box Designs</li>
+              <li>Print Preparation</li>
+              <li>3D Mockups</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT TEASER -->
-    <section class="contact-teaser fade-in container">
-      <h2 class="fade-in" style="font-family: var(--font-heading); font-size: 64px; color: var(--text); letter-spacing: 2px;">START A PROJECT</h2>
-      <p class="fade-in" style="margin: 14px auto; max-width: 420px; font-family: var(--font-body); font-weight: 300; font-size: 15px; color: var(--text-mid);">Open to collaborations, freelance, and opportunities.</p>
-      <div style="margin-top: 36px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a href="contact.html" class="btn btn-primary">Send a Message</a>
-        <a href="https://linkedin.com/in/krishna-dabas" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
+    <!-- SECTION 5 — FEATURED CASE STUDIES -->
+    <section id="case-studies" class="section container fade-in">
+      <div class="section-header-row">
+        <div>
+          <span class="eyebrow">Featured Work</span>
+          <h2 class="section-h2" style="margin-top: 8px;">CASE STUDIES</h2>
+        </div>
+        <div class="filter-bar" style="margin: 0;">
+          <button class="filter-btn filter-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="social">Social Media</button>
+          <button class="filter-btn" data-filter="web">Website Design</button>
+          <button class="filter-btn" data-filter="packaging">Packaging</button>
+        </div>
+      </div>
+      
+      <div class="case-studies-grid">
+        <!-- CASE STUDY 01: NovaTech -->
+        <div class="project-card case-study-card fade-in" 
+             data-filter-cat="branding web" 
+             data-title="NovaTech — Technology Startup Branding" 
+             data-category="Branding · Web" 
+             data-desc="Technology Startup Branding" 
+             data-tools="Figma · Illustrator · Photoshop" 
+             data-objective="NovaTech needed a professional and scalable identity that could communicate innovation while remaining approachable to potential customers." 
+             data-process="Logo Design, Brand Identity, Social Media Assets, Brand Guidelines" 
+             data-decision="Deliverables" 
+             data-label="Deliverables" 
+             data-year="2 Weeks" 
+             data-role="Technology" 
+             data-overview="NovaTech needed a professional and scalable identity that could communicate innovation while remaining approachable to potential customers." 
+             data-direction="The brand system was built around clean geometric forms, a modern sans-serif typeface, and a refined color palette to balance professionalism and innovation." 
+             data-outcome="A cohesive visual identity capable of scaling across digital platforms, marketing materials, and future product launches." 
+             data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" 
+             data-modal-img="assets/3.1.png">
+          <div class="project-card-img">
+            <img src="assets/3.0.png" alt="NovaTech Branding" loading="lazy">
+          </div>
+          <div class="project-card-info">
+            <div class="case-study-meta">
+              <span class="cs-tag">Branding</span>
+              <span class="cs-tag">Website Design</span>
+            </div>
+            <h3 class="project-card-title">NovaTech</h3>
+            <div class="project-card-details">
+              <div class="card-detail-item"><strong>Challenge:</strong> Establish a modern identity for an innovative tech startup.</div>
+              <div class="card-detail-item"><strong>Strategy:</strong> Build a clean, geometric visual system balancing high tech and accessibility.</div>
+              <div class="card-detail-item"><strong>Solution:</strong> Custom logomark, tech-focused typography, color palette, and premium website.</div>
+              <div class="card-detail-item"><strong>Outcome:</strong> Scalable, highly professional brand presence ready for rapid expansion.</div>
+            </div>
+            <div class="case-study-footer">
+              <span class="cs-stat"><strong>Timeline:</strong> 2 Weeks</span>
+              <span class="project-card-link">View Case Study →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 02: PeakFit -->
+        <div class="project-card case-study-card fade-in" 
+             data-filter-cat="social" 
+             data-title="PeakFit — Fitness Brand Campaign" 
+             data-category="Social Media" 
+             data-desc="Fitness Brand Campaign" 
+             data-tools="Photoshop · Illustrator · Figma" 
+             data-objective="The existing visual presence lacked consistency and failed to communicate the energy of the fitness community." 
+             data-process="Social Media Templates, Campaign Graphics, Promotional Content" 
+             data-decision="Deliverables" 
+             data-label="Deliverables" 
+             data-year="10 Days" 
+             data-role="Fitness" 
+             data-overview="The existing visual presence lacked consistency and failed to communicate the energy of the fitness community." 
+             data-direction="Created a bold social media design system focused on high contrast visuals, motivational messaging, and strong visual hierarchy." 
+             data-outcome="A more recognizable and engaging visual presence suitable for long-term marketing campaigns." 
+             data-color-1="#00C2D4" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" 
+             data-modal-img="assets/2.1.png">
+          <div class="project-card-img">
+            <img src="assets/2.0.png" alt="PeakFit Campaign" loading="lazy">
+          </div>
+          <div class="project-card-info">
+            <div class="case-study-meta">
+              <span class="cs-tag">Social Media</span>
+            </div>
+            <h3 class="project-card-title">PeakFit</h3>
+            <div class="project-card-details">
+              <div class="card-detail-item"><strong>Challenge:</strong> Unify a fragmented and low-energy fitness social media presence.</div>
+              <div class="card-detail-item"><strong>Strategy:</strong> Develop a high-contrast, energetic visual system emphasizing motivation.</div>
+              <div class="card-detail-item"><strong>Solution:</strong> Custom templates, bold typography layouts, and structured campaign graphics.</div>
+              <div class="card-detail-item"><strong>Outcome:</strong> A cohesive, recognizable social feed that drove strong audience engagement.</div>
+            </div>
+            <div class="case-study-footer">
+              <span class="cs-stat"><strong>Timeline:</strong> 10 Days</span>
+              <span class="project-card-link">View Case Study →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 03: BrewHouse Café -->
+        <div class="project-card case-study-card fade-in" 
+             data-filter-cat="branding packaging" 
+             data-title="BrewHouse Café — Brand Identity Concept" 
+             data-category="Branding · Packaging" 
+             data-desc="Brand Identity Concept" 
+             data-tools="Illustrator · Photoshop · Figma" 
+             data-objective="Develop a modern café identity that balances warmth, authenticity, and premium positioning." 
+             data-process="Logo System, Packaging Concepts, Menu Design, Social Media Graphics" 
+             data-decision="Deliverables" 
+             data-label="Deliverables" 
+             data-year="2 Weeks" 
+             data-role="Food & Beverage" 
+             data-overview="Develop a modern café identity that balances warmth, authenticity, and premium positioning." 
+             data-direction="Combined earthy tones, custom typography, and minimal visual elements to create a memorable customer experience." 
+             data-outcome="A cohesive brand identity designed to strengthen customer recognition and brand consistency." 
+             data-color-1="#D4A373" data-color-2="#0E0E0E" data-color-3="#F0F2F4" data-font="Bebas Neue + Raleway" 
+             data-modal-img="assets/1.1.png">
+          <div class="project-card-img">
+            <img src="assets/1.0.png" alt="BrewHouse Café Identity" loading="lazy">
+          </div>
+          <div class="project-card-info">
+            <div class="case-study-meta">
+              <span class="cs-tag">Branding</span>
+              <span class="cs-tag">Packaging</span>
+            </div>
+            <h3 class="project-card-title">BrewHouse Café</h3>
+            <div class="project-card-details">
+              <div class="card-detail-item"><strong>Challenge:</strong> Position a local coffee shop as an artisanal, premium destination brand.</div>
+              <div class="card-detail-item"><strong>Strategy:</strong> Merge earthy warmth with minimal layouts to highlight quality and craftsmanship.</div>
+              <div class="card-detail-item"><strong>Solution:</strong> Hand-crafted brand typography, packaging wraps, and clean menu designs.</div>
+              <div class="card-detail-item"><strong>Outcome:</strong> A distinct and inviting brand experience that builds immediate local trust.</div>
+            </div>
+            <div class="case-study-footer">
+              <span class="cs-stat"><strong>Timeline:</strong> 2 Weeks</span>
+              <span class="project-card-link">View Case Study →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5.5 — BEFORE & AFTER COMPARISON -->
+    <section id="before-after" class="section container fade-in">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <span class="eyebrow">Proven Value</span>
+        <h2 class="section-h2" style="margin-top: 8px;">BEFORE & AFTER WORK</h2>
+        <p style="margin-top: 8px; font-family: var(--font-body); font-weight: 300; font-size: 14px; color: var(--text-mid);">See how strategic design elevates brands from amateur to premium. Drag the slider to compare.</p>
+      </div>
+
+      <div class="grid-2" style="gap: 40px;">
+        <!-- Card 1: Cafe Branding -->
+        <div class="before-after-card glass-card">
+          <h3 style="font-family: var(--font-body); font-weight: var(--fw-bold); font-size: 17px; margin-bottom: 12px; text-align: center; letter-spacing: -0.2px;">BrewHouse Café Identity</h3>
+          <p style="font-family: var(--font-body); font-weight: 300; font-size: 13px; color: var(--text-mid); text-align: center; margin-bottom: 24px;">Old Café Branding (Outdated, Clip-art Logo) → New Modern Premium Branding</p>
+          <div class="before-after-slider">
+            <div class="image-before">
+              <img src="assets/old_cafe.png" alt="Old Cafe Branding">
+              <span class="label before-label">Before</span>
+            </div>
+            <div class="image-after">
+              <img src="assets/new_cafe.png" alt="New Cafe Branding">
+              <span class="label after-label">After</span>
+            </div>
+            <div class="slider-divider">
+              <div class="slider-button">↔</div>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider-handle" aria-label="Compare Cafe Branding">
+          </div>
+        </div>
+
+        <!-- Card 2: Instagram Post -->
+        <div class="before-after-card glass-card">
+          <h3 style="font-family: var(--font-body); font-weight: var(--fw-bold); font-size: 17px; margin-bottom: 12px; text-align: center; letter-spacing: -0.2px;">Instagram Post Redesign</h3>
+          <p style="font-family: var(--font-body); font-weight: 300; font-size: 13px; color: var(--text-mid); text-align: center; margin-bottom: 24px;">Old Instagram Post (Cluttered, Basic Colors) → New Premium Structured Post</p>
+          <div class="before-after-slider">
+            <div class="image-before">
+              <img src="assets/1ne.png" alt="Old Instagram Post">
+              <span class="label before-label">Before</span>
+            </div>
+            <div class="image-after">
+              <img src="assets/2ne.png" alt="New Instagram Post">
+              <span class="label after-label">After</span>
+            </div>
+            <div class="slider-divider">
+              <div class="slider-button">↔</div>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider-handle" aria-label="Compare Instagram Post">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- SECTION 12 — FINAL CTA & CONTACT -->
+    <section id="contact" class="section container final-cta fade-in">
+      <div class="cta-bg-glow"></div>
+      <div class="contact-grid">
+        <div class="cta-left fade-in-left">
+          <span class="eyebrow">Get in Touch</span>
+          <h2 class="section-h2" style="margin-top: 8px; font-size: 64px; line-height: 1;">Ready to Elevate Your Brand?</h2>
+          <p class="body-text" style="margin-top: 20px; color: var(--text-mid);">Whether you need branding, social media design, or a modern website, Orvexon Studio is ready to help.</p>
+          
+          <div class="cta-buttons" style="margin-top: 32px;">
+            <a href="#contactForm" class="btn btn-primary">Start a Project</a>
+            <a href="#case-studies" class="btn btn-ghost">View Case Studies</a>
+          </div>
+          
+          <div class="social-links-container" style="margin-top: 48px;">
+            <span class="contact-link-label" style="display: block; margin-bottom: 16px;">Connect with us</span>
+            <div class="social-links" style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="https://instagram.com/orvexon_studio" target="_blank" rel="noopener noreferrer" class="social-link">Instagram ↗</a>
+              <a href="https://linkedin.com/in/krishna-dabas" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
+              <a href="https://github.com/krishnaDabas19" target="_blank" rel="noopener noreferrer" class="social-link">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cta-right fade-in-right">
+          <div class="contact-form-wrapper glass-card">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-input" style="min-height: 120px; resize: vertical;" placeholder="Tell me about your project or idea..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">SEND MESSAGE →</button>
+              <p class="form-note">or email directly: krishna.lpu2025@gmail.com</p>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -238,13 +535,14 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-left fade-in">
-          <div class="nav-logo-fallback" style="width:20px;height:20px;font-size:10px;">KD</div>
+          <img src="assets/logo.png" alt="Orvexon Logo" class="nav-logo-img" style="width:20px;height:20px;">
           <span class="footer-left-text">Krishna Dabas · Orvexon Studio</span>
         </div>
         <div class="footer-center fade-in">
           <a href="work.html">Work</a>
           <a href="about.html">About</a>
           <a href="studio.html">Studio</a>
+          <a href="testimonials.html">Testimonials</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-right fade-in">
@@ -271,13 +569,13 @@
         <p class="modal-desc" style="font-family: var(--font-body); font-weight: 300; font-size: 15px; color: var(--text-mid);"></p>
       </div>
 
-      <div class="modal-details-row" style="display: grid; grid-template-columns: repeat(3, 1fr); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 16px 0; margin: 32px 0;">
+      <div class="modal-details-row">
         <div>
-          <span class="modal-section-label">Year</span>
+          <span class="modal-section-label">Timeline</span>
           <div class="modal-year" style="font-family: var(--font-body); font-weight: 500; font-size: 14px; color: var(--text);"></div>
         </div>
         <div>
-          <span class="modal-section-label">Role</span>
+          <span class="modal-section-label">Industry</span>
           <div class="modal-role" style="font-family: var(--font-body); font-weight: 500; font-size: 14px; color: var(--text);"></div>
         </div>
         <div>
@@ -287,12 +585,12 @@
       </div>
       
       <div class="modal-section">
-        <span class="modal-section-label">Objective</span>
+        <span class="modal-section-label">Challenge</span>
         <div class="modal-section-content modal-obj"></div>
       </div>
       
       <div class="modal-section">
-        <span class="modal-section-label">Design Direction</span>
+        <span class="modal-section-label">Strategy</span>
         <div class="modal-section-content modal-direction"></div>
       </div>
       
@@ -305,11 +603,11 @@
       </div>
       
       <div class="modal-section">
-        <span class="modal-section-label">Process</span>
+        <span class="modal-section-label">Solution & Deliverables</span>
         <div class="modal-section-content modal-process"></div>
       </div>
       
-      <div class="modal-mockups" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0;">
+      <div class="modal-mockups">
         <div style="aspect-ratio: 4/3; background: var(--surface-2); border-radius: var(--radius-md);"></div>
         <div style="aspect-ratio: 4/3; background: var(--surface-2); border-radius: var(--radius-md);"></div>
       </div>
