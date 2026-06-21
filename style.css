@@ -1317,34 +1317,7 @@ body.modal-open {
 /* REDUCED MOTION */
 
 
-/* RESPONSIVENESS FIXES */
-@media (max-width: 480px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .hero h1 { font-size: 64px; }
-  .nav-wordmark { display: none; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .what-i-do-grid { grid-template-columns: 1fr; }
-  section { padding: 60px 0; }
-  .container { padding-left: 20px; padding-right: 20px; }
-}
 
-@media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; gap: 40px; }
-  .hero h1 { font-size: 72px; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .what-i-do-grid { grid-template-columns: 1fr 1fr; }
-  .skills-category-grid { grid-template-columns: 1fr 1fr !important; }
-  .bio-grid { grid-template-columns: 1fr; }
-  .studio-callout-inner { flex-direction: column; gap: 24px; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
-}
-
-@media (min-width: 1400px) {
-  .container { max-width: 1200px; }
-  .hero h1 { font-size: 112px; }
-}
 
 
 /* =========================================================================
@@ -1739,6 +1712,8 @@ p, .body-text, .hero-body, .bio-text, .about-bio-text, .project-card-desc, .serv
 img, video { max-width: 100%; height: auto; }
 .container {
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
 }
